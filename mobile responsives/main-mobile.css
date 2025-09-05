@@ -1,0 +1,23 @@
+@media screen and (max-width: 425px) {
+  .header__mobile-ul {
+    width: 100%;
+  }
+  .search-field__grid-container {
+    row-gap: 0;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(200px, 96vw);
+    row-gap: 10px;
+  }
+  .cart {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .search-field__input {
+    width: 70%;
+  }
+  .account-form__login-method {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}/*# sourceMappingURL=main-mobile.css.map */

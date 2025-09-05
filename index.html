@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./tablet responsives/main-tablet.css">
+  <link rel="stylesheet" href="./mobile responsives/main-mobile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header class="header">
+    <a class="header__logo-container" href="">
+      <h1 class="header__logo-first-word">Tote</h1>
+      <span class="header__logo-second-word">Funky Printed Bags</span>
+    </a>
+    <nav class="header__nav">
+      <ul class="header__desktop-ul">
+        <li class="header__desktop-list"><a class="header__desktop-link header__desktop-link--active" href="">Shop</a></li>
+        <li class="header__desktop-list"><a class="header__desktop-link" href="">About</a></li>
+        <li class="header__desktop-list"><a class="header__desktop-link" href="">FAQ</a></li>
+        <li class="header__desktop-list"><a class="header__desktop-link" href="">Gift Card</a></li>
+        <li class="header__desktop-list"><a class="header__desktop-link" href="">Contact</a></li>
+      </ul>
+      <ul class="header__mobile-ul">
+        <i onclick=closeSidebar() class="fa-solid fa-xmark header__mobile-xmark"></i>
+        <div onclick=openRegistrationForm() class="header__mobile-user-account">
+          <i class="fa-solid fa-circle-user header__mobile-user-icon"></i>
+          <span class="header__mobile-login-text">Log In</span>
+        </div>
+        <li class="header__mobile-list"><a class="header__mobile-link header__mobile-link--active" href="">Shop</a></li>
+        <li class="header__mobile-list"><a class="header__mobile-link" href="">About</a></li>
+        <li class="header__mobile-list"><a class="header__mobile-link" href="">FAQ</a></li>
+        <li class="header__mobile-list"><a class="header__mobile-link" href="">Gift Card</a></li>
+        <li class="header__mobile-list"><a class="header__mobile-link" href="">Contact</a></li>
+      </ul>
+      <div class="header__other-nav-stuff">
+        <!-- input -->
+        <div onclick=openSearchField() class="header__input-container">
+          <i class="fa-solid fa-magnifying-glass header__search-icon"></i>
+          <input class="header__input" type="text" placeholder="Search">
+        </div>
+        <div class="search-field">
+          <div class="search-field__input-container">
+            <i class="fa-solid fa-magnifying-glass search-field__search-icon"></i>
+            <input class="search-field__input" type="text" placeholder="Search">
+            <span onclick=closeSearchField() class="search-field__close-text">Close</span>
+          </div>
+          <p class="search-field__trending-text">Trending Products</p>
+          <div class="search-field__grid-container">
+            <div class="product-card">
+              <div class="product-card__upper-side">
+                <img class="product-card__image product-card__image--primary" src="./all bags/first1.avif" alt="first">
+                <img class="product-card__image product-card__image--secondary" src="./all bags/first2.avif" alt="first">
+              </div>
+              <div class="product-card__lower-side">
+                <p class="product-card__improduct-text">I'm a product</p>
+                <p class="product-card__price">$15.00</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__upper-side">
+                <img class="product-card__image product-card__image--primary" src="./all bags/second1.avif" alt="second">
+                <img class="product-card__image product-card__image--secondary" src="./all bags/second2.avif" alt="second">
+                <span class="product-card__status">Top Sellers</span>
+              </div>
+              <div class="product-card__lower-side">
+                <p class="product-card__improduct-text">I'm a product</p>
+                <p class="product-card__price">$15.00</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__upper-side">
+                <img class="product-card__image product-card__image--primary" src="./all bags/third1.avif" alt="third">
+                <img class="product-card__image product-card__image--secondary" src="./all bags/third2.avif" alt="third">
+                <span class="product-card__status">Top Sellers</span>
+              </div>
+              <div class="product-card__lower-side">
+                <p class="product-card__improduct-text">I'm a product</p>
+                <p class="product-card__price">$15.00</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__upper-side">
+                <img class="product-card__image product-card__image--primary" src="./all bags/fourth1.avif" alt="fourth">
+                <img class="product-card__image product-card__image--secondary" src="./all bags/fourth2.avif" alt="fourth">
+              </div>
+              <div class="product-card__lower-side">
+                <p class="product-card__improduct-text">I'm a product</p>
+                <p class="product-card__price">$15.00</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__upper-side">
+                <img class="product-card__image product-card__image--primary" src="./all bags/eleventh1.avif" alt="eleventh">
+                <img class="product-card__image product-card__image--secondary" src="./all bags/eleventh2.avif" alt="eleventh">
+                <span class="product-card__status">Sale</span>
+              </div>
+              <div class="product-card__lower-side">
+                <p class="product-card__improduct-text">I'm a product</p>
+                <p class="product-card__price"><span class="product-card__price product-card__price--old">$15.00</span> $14.25</p>
+              </div>
+            </div>
+          </div>
+          <button class="search-field__show-btn">Show All Results</button>
+        </div>
+        <!-- account -->
+        <div onclick=openRegistrationForm() class="header__user-account">
+          <i class="fa-solid fa-circle-user header__user-icon"></i>
+          <span class="header__login-text">Log In</span>
+        </div>
+        <div class="account-form">
+          <i onclick=closeRegistrationForm() class="fa-solid fa-xmark account-form__xmark"></i>
+          <form class="account-form__form">
+            <h2 class="account-form__heading">Create your account</h2>
+            <p class="account-form__welcome-text">Welcome! Please fill in the details to get started.</p>
+            <div class="account-form__login-method">
+              <img class="account-form__media-logo" src="./other assets/google-logo.png" alt="Google">
+              <span class="account-form__media-name">Google</span>
+            </div>
+            <div class="account-form__login-method">
+              <img class="account-form__media-logo" src="./other assets/facebook-logo.png" alt="Google">
+              <span class="account-form__media-name">Facebook</span>
+            </div>
+            <p class="account-form__or-text">or</p>
+            <div class="account-form__input-grid-container">
+              <div class="account-form__input-container account-form__input-container--first">
+                <label class="account-form__label" for="fname">First name</label>
+                <input class="account-form__input" id="fname" type="text">
+              </div>
+              <div class="account-form__input-container account-form__input-container--second">
+                <label class="account-form__label" for="lname">Last name</label>
+                <input class="account-form__input" id="lname" type="text">
+              </div>
+              <div class="account-form__input-container account-form__input-container--third">
+                <label class="account-form__label" for="email">Email address</label>
+                <input class="account-form__input" id="email" type="email">
+              </div>
+              <div class="account-form__input-container account-form__input-container--fourth">
+                <label class="account-form__label" for="password">Password</label>
+                <input class="account-form__input" id="password" type="password">
+              </div>
+            </div>
+            <button class="account-form__button" type="submit">Continue</button>
+            <p class="account-form__signin-text">Already have an account? <a class="account-form__signin-link" href="">Sign in</a></p>
+          </form>
+        </div>
+        <!-- cart -->
+         <img onclick=openCart() class="header__cart-img" src="./other assets/cart.png" alt="cart icon">
+         <i onclick=openSidebar() class="fa-solid fa-bars header__bars-icon"></i>
+         <div class="cart">
+            <p class="cart__cart-text">Cart <span class="cart__item-quantity">(0 items)</span></p>
+            <i onclick=closeCart() class="fa-solid fa-xmark cart__xmark"></i>
+            <div class="cart__strip"></div>
+            <p class="cart__empty-text">Your cart is empty.</p>
+         </div>
+         <div onclick=closeCart() class="header__dark-bg"></div>
+      </div>
+    </nav>
+  </header>
+
+
+  <script src="./script.js"></script>
+</body>
+</html>
