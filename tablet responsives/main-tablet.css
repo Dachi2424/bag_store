@@ -12,9 +12,28 @@
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(200px, 46vw);
   }
+  .product-grid {
+    padding-inline: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(0, 70vw);
+  }
+  .about {
+    height: 50svh;
+    padding: 120px 0 80px;
+  }
+  .about__heading {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .about__paragraph {
+    font-size: 18px;
+    line-height: 30px;
+    width: 500px;
+  }
 }
 @media screen and (max-width: 580px) {
   .header {
+    position: relative;
     padding: 20px 30px;
   }
   .header__other-nav-stuff {
@@ -30,6 +49,23 @@
   .search-field__grid-container {
     row-gap: 15px;
     grid-auto-rows: minmax(200px, 65vw);
+  }
+  .product-grid {
+    padding-top: 90px;
+    padding-inline: 0;
+    grid-auto-rows: minmax(0, 60vw);
+  }
+  .product-card__image--secondary {
+    display: none;
+  }
+  .product-card__cart-btn {
+    display: none;
+  }
+  .about {
+    padding: 60px 0 30px;
+  }
+  .about__paragraph {
+    width: 380px;
   }
 }
 @media screen and (max-width: 510px) {

@@ -11,6 +11,12 @@
   .cart {
     width: 100%;
   }
+  .product-grid {
+    grid-auto-rows: minmax(0, 70vw);
+  }
+  .about__paragraph {
+    width: 300px;
+  }
 }
 @media screen and (max-width: 375px) {
   .search-field__input {
@@ -19,5 +25,11 @@
   .account-form__login-method {
     width: 100%;
     margin-bottom: 5px;
+  }
+  .about {
+    height: 60svh;
+  }
+  .about__paragraph {
+    width: 280px;
   }
 }/*# sourceMappingURL=main-mobile.css.map */

@@ -115,6 +115,9 @@ html, body, input, button, select{
     &--margin{
       margin-top: 6px;
     }
+    &--dark{
+      color: var(--primary-color);
+    }
   }
   &__cart-btn{
     color: var(--primary-color);
@@ -555,10 +558,23 @@ html, body, input, button, select{
   text-align: center;
 }
 
-
-
-
-
+.about{
+  padding: 150px 0 100px;
+  height: 70vh;
+  background-color: #F7F6F6;
+  &__heading{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  &__paragraph{
+    margin-inline: auto;
+    text-align: center;
+    font-size: 26px;
+    line-height: 44px;
+    width: 730px;
+  }
+}
 
 
 
@@ -630,7 +646,12 @@ html, body, input, button, select{
       grid-auto-rows: minmax(200px, 35vw);
     }
   }
+  .product-grid{
+    padding-inline: 70px;
+    grid-auto-rows: minmax(200px, 48vw);
+  }
 }
+
 
 @media screen and (max-width: 865px) {
   .search-field{
@@ -640,5 +661,10 @@ html, body, input, button, select{
     &__grid-container{
       grid-auto-rows: minmax(200px, 38vw);
     }
+  }
+  .product-grid{
+    padding-inline: 30px;
+    column-gap: 10px;
+    grid-auto-rows: minmax(200px, 55vw);
   }
 }

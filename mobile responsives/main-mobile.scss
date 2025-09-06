@@ -15,6 +15,14 @@
   .cart{
     width: 100%;
   }
+  .product-grid{
+    grid-auto-rows: minmax(0, 70vw);
+  }
+  .about{
+    &__paragraph{
+      width: 300px;
+    }
+  }
 }
 
 @media screen and (max-width: 375px){
@@ -27,6 +35,12 @@
     &__login-method{
       width: 100%;
       margin-bottom: 5px;
+    }
+  }
+  .about{
+    height: 60svh;
+    &__paragraph{
+      width: 280px;
     }
   }
 }
