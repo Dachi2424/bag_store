@@ -33,16 +33,23 @@ html, body, input, button, select{
 
 //#region reusable card
 .product-card{
+  &:hover .product-card__cart-btn{
+    opacity: 1;
+    transition: opacity .3s;
+  }
   &__upper-side{
     height: 80%;
     width: 100%;
     position: relative;
     cursor: pointer;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     &:hover .product-card__image--secondary{
       z-index: 2;
       opacity: 1;
       transition: .2s;
+    }
+    &--smaller{
+      height: 70%;
     }
   }
   &__image{
@@ -61,6 +68,9 @@ html, body, input, button, select{
       opacity: 0;
       transition: .2s;
     }
+    &--rounded{
+      border-radius: 10px;
+    }
   }
   &__status{
     font-size: 14px;
@@ -71,14 +81,55 @@ html, body, input, button, select{
     padding: 4px 12px;
     top: 10px;
     left: 10px;
+    &--dark{
+      font-weight: 300;
+      background-color: var(--primary-color);
+    }
+    &--rounded{
+      border-radius: 6px;
+      padding: 3px 12px;
+      left: 12px;
+    }
   }
   &__improduct-text{
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+  &__strip{
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: -10px;
     margin-bottom: 6px;
+    cursor: pointer;
   }
   &__price{
     color: #757575;
+    display: block;
+    cursor: pointer;
     &--old{
       text-decoration: line-through;
+      display: unset;
+    }
+    &--margin{
+      margin-top: 6px;
+    }
+  }
+  &__cart-btn{
+    color: var(--primary-color);
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+    width: 75%;
+    height: 40px;
+    margin-top: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .3s ease;
+    &:hover{
+      text-decoration: underline;
     }
   }
 }
@@ -87,6 +138,8 @@ html, body, input, button, select{
 //#region header stuff
 .header{
   position: fixed;
+  z-index: 10;
+  background-color: white;
   top: 0;
   width: 100%;
   display: flex;
@@ -490,6 +543,44 @@ html, body, input, button, select{
 
 
 //#endregion
+
+.product-grid{
+  padding-inline: 90px;
+  padding-top: 140px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(200px, 40vw);
+  column-gap: 20px;
+  row-gap: 30px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 1400px){
