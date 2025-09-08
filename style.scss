@@ -738,6 +738,9 @@ html, body, input, button, select{
       gap: 150px;
     }
   }
+  .footer{
+    padding: 0 100px 0 250px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -745,6 +748,9 @@ html, body, input, button, select{
     &__nav{
       gap: 80px;
     }
+  }
+  .footer{
+    padding: 0 70px 0 200px;
   }
 }
 
@@ -775,6 +781,11 @@ html, body, input, button, select{
     padding-inline: 70px;
     grid-auto-rows: minmax(200px, 48vw);
   }
+  .footer{
+    &__inputs-container{
+      grid-template-columns: 300px 1fr;
+    }
+  }
 }
 
 
@@ -791,5 +802,19 @@ html, body, input, button, select{
     padding-inline: 30px;
     column-gap: 10px;
     grid-auto-rows: minmax(200px, 55vw);
+  }
+  .footer{
+    padding: 0 70px 40px 150px;
+    &__grid-container{
+      justify-items: center;
+    }
+    &__inputs-container{
+      grid-template-columns: 300px;
+      grid-template-rows: 4fr 6fr 7fr 5fr;
+      
+    }
+    &__subscribe-btn{
+      grid-row: 4 / 5;
+    }
   }
 }
