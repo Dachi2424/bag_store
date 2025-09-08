@@ -13,6 +13,18 @@ function closeComment(){
   field.style.display = "none";
 }
 //#endregion
+
+window.addEventListener("scroll", function () {
+  const box = document.querySelector(".scroll-up");
+  const triggerpoint = this.window.innerHeight;
+
+  if(window.scrollY > triggerpoint) {
+    box.style.display = "flex";
+  } else {
+    box.style.display = "none"
+  }
+});
+
 //#region searchbar open/close functions
 function openSearchField(){
   const searchField = document.querySelector(".search-field");

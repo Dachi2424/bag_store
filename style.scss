@@ -266,6 +266,30 @@ html, body, input, button, select, textarea{
       display: none;
     }
   }
+  .scroll-up{
+    position: fixed;
+    z-index: 4;
+    right: 20px;
+    bottom: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.3);
+    &__sign{
+      text-decoration: none;
+      color: white;
+      margin-left: 4px;
+      font-size: 24px;
+      font-family: 'Courier New', Courier, monospace;
+      transform: rotate(-90deg) scaleY(1.8);
+    }
+  }
 //#endregion
 
 //#region header stuff
