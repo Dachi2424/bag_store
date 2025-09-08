@@ -16,6 +16,10 @@
   src: url(./fonts/avenir-lt-w01_85-heavy1475544.woff2);
   font-weight: 600;
 }
+@font-face {
+  font-family: halvetica;
+  src: url(./fonts/Helvetica/HelveticaNeue-Thin.otf);
+}
 :root {
   --primary-color: #121212;
 }
@@ -24,7 +28,7 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body, input, button, select {
+html, body, input, button, select, textarea {
   font-family: dachi;
   font-weight: 600;
   color: var(--primary-color);
@@ -133,6 +137,135 @@ html, body, input, button, select {
 }
 .product-card__cart-btn:hover {
   text-decoration: underline;
+}
+
+.social-media-logos {
+  position: fixed;
+  z-index: 1;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+}
+.social-media-logos__link {
+  font-size: 19px;
+}
+.social-media-logos__link--smaller {
+  font-size: 16px;
+}
+
+.message-icon {
+  position: fixed;
+  z-index: 4;
+  bottom: 20px;
+  right: 20px;
+  width: 65px;
+  height: 65px;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+.message-icon__image {
+  width: 45%;
+  height: 45%;
+}
+
+.message-field {
+  position: fixed;
+  z-index: 4;
+  bottom: 20px;
+  right: 20px;
+  width: 340px;
+  height: 600px;
+  background-color: white;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.message-field__upper-side {
+  padding: 20px;
+  background-color: var(--primary-color);
+  height: 80px;
+  position: relative;
+}
+.message-field__heading {
+  color: white;
+  font-size: 19px;
+  margin-bottom: 5px;
+}
+.message-field__flexbox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.message-field__green-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #43B72A;
+}
+.message-field__active-status {
+  color: white;
+  font-size: 14px;
+  font-family: halvetica;
+}
+.message-field__xmark {
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.message-field__lower-side {
+  height: 60px;
+  border-top: 1px solid rgb(230, 230, 230);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.message-field__textarea {
+  resize: none;
+  outline: none;
+  font-size: 16px;
+  color: black;
+  border: none;
+}
+.message-field__textarea::-moz-placeholder {
+  color: black;
+}
+.message-field__textarea::placeholder {
+  color: black;
+}
+.message-field__icons {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.message-field__smile {
+  color: rgb(166, 166, 166);
+  cursor: pointer;
+}
+.message-field__smile:hover {
+  color: rgb(200, 200, 200);
+}
+.message-field__attach {
+  color: rgb(166, 166, 166);
+  cursor: pointer;
+}
+.message-field__attach:hover {
+  color: rgb(200, 200, 200);
+}
+.message-field__hidden-input {
+  display: none;
 }
 
 .header {
@@ -550,7 +683,7 @@ html, body, input, button, select {
 
 .product-grid {
   padding-inline: 90px;
-  padding-top: 140px;
+  padding-top: 120px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(200px, 40vw);
@@ -760,6 +893,9 @@ html, body, input, button, select {
   }
 }
 @media screen and (max-width: 865px) {
+  .social-media-logos {
+    display: none;
+  }
   .search-field__input {
     width: 88%;
   }

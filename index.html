@@ -10,6 +10,35 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  <!-- everything that is fixed positioned is here -->
+  <div class="social-media-logos">
+    <a class="social-media-logos__link social-media-logos__link--smaller" href="https://www.facebook.com/wix" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+    <a class="social-media-logos__link" href="https://www.instagram.com/wix/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a class="social-media-logos__link" href="https://www.pinterest.com/wixcom/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
+  </div>
+  <div onclick=openComment() class="message-icon">
+    <img class="message-icon__image" src="./other assets/comment-pic.png" alt="comment icon">
+  </div>
+  <div class="message-field">
+    <div class="message-field__upper-side">
+      <h3 class="message-field__heading">Tote. Chat with us!</h3>
+      <div class="message-field__flexbox">
+        <div class="message-field__green-dot"></div>
+        <span class="message-field__active-status">We'll reply as soon as we can</span>
+      </div>
+      <i onclick=closeComment() class="fa-solid fa-xmark message-field__xmark"></i>
+    </div>
+    <div class="message-field__lower-side">
+      <textarea class="message-field__textarea" rows="1" cols="26" placeholder="Write your message..."></textarea>
+      <div class="message-field__icons">
+        <i class="fa-regular fa-face-smile message-field__smile"></i>
+        <label class="message-field__label" for="file-upload">
+          <i class="fa-solid fa-paperclip message-field__attach"></i>
+        </label>
+        <input class="message-field__hidden-input" id="file-upload" type="file">
+      </div>
+    </div>
+  </div>
   <header class="header">
     <a class="header__logo-container" href="">
       <h1 class="header__logo-first-word">Tote</h1>

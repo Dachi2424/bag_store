@@ -1,3 +1,18 @@
+
+//#region comment open/close functions
+function openComment(){
+  const icon = document.querySelector(".message-icon");
+  const field = document.querySelector(".message-field");
+  icon.style.display = "none";
+  field.style.display = "flex";
+}
+function closeComment(){
+  const icon = document.querySelector(".message-icon");
+  const field = document.querySelector(".message-field");
+  icon.style.display = "flex";
+  field.style.display = "none";
+}
+//#endregion
 //#region searchbar open/close functions
 function openSearchField(){
   const searchField = document.querySelector(".search-field");
