@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="./faq.css">
+  <link rel="stylesheet" href="../../tablet responsives/main-tablet.css">
+  <link rel="stylesheet" href="../../mobile responsives/main-mobile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <!-- everything that is fixed positioned is here -->
+  <div class="social-media-logos">
+    <a class="social-media-logos__link social-media-logos__link--smaller" href="https://www.facebook.com/wix" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+    <a class="social-media-logos__link" href="https://www.instagram.com/wix/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a class="social-media-logos__link" href="https://www.pinterest.com/wixcom/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
+  </div>
+  <div onclick=openComment() class="message-icon">
+    <img class="message-icon__image" src="../../other assets/comment-pic.png" alt="comment icon">
+  </div>
+  <div class="message-field">
+    <div class="message-field__upper-side">
+      <h3 class="message-field__heading">Tote. Chat with us!</h3>
+      <div class="message-field__flexbox">
+        <div class="message-field__green-dot"></div>
+        <span class="message-field__active-status">We'll reply as soon as we can</span>
+      </div>
+      <i onclick=closeComment() class="fa-solid fa-xmark message-field__xmark"></i>
+    </div>
+    <div class="message-field__lower-side">
+      <textarea class="message-field__textarea" rows="1" cols="26" placeholder="Write your message..."></textarea>
+      <div class="message-field__icons">
+        <i class="fa-regular fa-face-smile message-field__smile"></i>
+        <label class="message-field__label" for="file-upload">
+          <i class="fa-solid fa-paperclip message-field__attach"></i>
+        </label>
+        <input class="message-field__hidden-input" id="file-upload" type="file">
+      </div>
+    </div>
+  </div>
+  <div class="scroll-up">
+    <a class="scroll-up__sign" href="#">></a>
+  </div>
+  <header class="header">
+    <a class="header__logo-container" href="../../index.html">
+      <h1 class="header__logo-first-word">Tote</h1>
+      <span class="header__logo-second-word">Funky Printed Bags</span>
+    </a>
+    <nav class="header__nav">
+      <ul class="header__desktop-ul">
+        <li class="header__desktop-list"><a class="header__desktop-link" href="../../index.html">Shop</a></li>
+        <li class="header__desktop-list"><a class="header__desktop-link" href="../../index.html">About</a></li>
+        <li class="header__desktop-list"><a class="header__desktop-link header__desktop-link--active" href="#">FAQ</a></li>
+        <li class="header__desktop-list"><a class="header__desktop-link" href="">Gift Card</a></li>
+        <li class="header__desktop-list"><a class="header__desktop-link" href="">Contact</a></li>
+      </ul>
+      <ul class="header__mobile-ul">
+        <i onclick=closeSidebar() class="fa-solid fa-xmark header__mobile-xmark"></i>
+        <div onclick=openRegistrationForm() class="header__mobile-user-account">
+          <i class="fa-solid fa-circle-user header__mobile-user-icon"></i>
+          <span class="header__mobile-login-text">Log In</span>
+        </div>
+        <li class="header__mobile-list"><a class="header__mobile-link" href="../../index.html">Shop</a></li>
+        <li class="header__mobile-list"><a class="header__mobile-link" href="../../index.html">About</a></li>
+        <li class="header__mobile-list"><a class="header__mobile-link header__mobile-link--active" href="#">FAQ</a></li>
+        <li class="header__mobile-list"><a class="header__mobile-link" href="">Gift Card</a></li>
+        <li class="header__mobile-list"><a class="header__mobile-link" href="">Contact</a></li>
+      </ul>
+      <div class="header__other-nav-stuff">
+        <!-- input -->
+        <div onclick=openSearchField() class="header__input-container">
+          <i class="fa-solid fa-magnifying-glass header__search-icon"></i>
+          <input class="header__input" type="text" placeholder="Search">
+        </div>
+        <div class="search-field">
+          <div class="search-field__input-container">
+            <i class="fa-solid fa-magnifying-glass search-field__search-icon"></i>
+            <input class="search-field__input" type="text" placeholder="Search">
+            <span onclick=closeSearchField() class="search-field__close-text">Close</span>
+          </div>
+          <p class="search-field__trending-text">Trending Products</p>
+          <div class="search-field__grid-container">
+            <div class="product-card">
+              <div class="product-card__upper-side">
+                <img class="product-card__image product-card__image--primary" src="../../all bags/first1.avif" alt="first">
+                <img class="product-card__image product-card__image--secondary" src="../../all bags/first2.avif" alt="first">
+              </div>
+              <div class="product-card__lower-side">
+                <p class="product-card__improduct-text">I'm a product</p>
+                <p class="product-card__price product-card__price--margin">$15.00</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__upper-side">
+                <img class="product-card__image product-card__image--primary" src="../../all bags/second1.avif" alt="second">
+                <img class="product-card__image product-card__image--secondary" src="../../all bags/second2.avif" alt="second">
+                <span class="product-card__status">Top Sellers</span>
+              </div>
+              <div class="product-card__lower-side">
+                <p class="product-card__improduct-text">I'm a product</p>
+                <p class="product-card__price product-card__price--margin">$15.00</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__upper-side">
+                <img class="product-card__image product-card__image--primary" src="../../all bags/third1.avif" alt="third">
+                <img class="product-card__image product-card__image--secondary" src="../../all bags/third2.avif" alt="third">
+                <span class="product-card__status">Top Sellers</span>
+              </div>
+              <div class="product-card__lower-side">
+                <p class="product-card__improduct-text">I'm a product</p>
+                <p class="product-card__price product-card__price--margin">$15.00</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__upper-side">
+                <img class="product-card__image product-card__image--primary" src="../../all bags/fourth1.avif" alt="fourth">
+                <img class="product-card__image product-card__image--secondary" src="../../all bags/fourth2.avif" alt="fourth">
+              </div>
+              <div class="product-card__lower-side">
+                <p class="product-card__improduct-text">I'm a product</p>
+                <p class="product-card__price product-card__price--margin">$15.00</p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-card__upper-side">
+                <img class="product-card__image product-card__image--primary" src="../../all bags/fifth1.avif" alt="fifth">
+                <img class="product-card__image product-card__image--secondary" src="../../all bags/fifth2.avif" alt="fifth">
+              </div>
+              <div class="product-card__lower-side">
+                <p class="product-card__improduct-text">I'm a product</p>
+                <span class="product-card__price product-card__price--margin">$15.00</span>
+              </div>
+            </div>
+          </div>
+          <button class="search-field__show-btn">Show All Results</button>
+        </div>
+        <!-- account -->
+        <div onclick=openRegistrationForm() class="header__user-account">
+          <i class="fa-solid fa-circle-user header__user-icon"></i>
+          <span class="header__login-text">Log In</span>
+        </div>
+        <div class="account-form">
+          <i onclick=closeRegistrationForm() class="fa-solid fa-xmark account-form__xmark"></i>
+          <form class="account-form__form">
+            <h2 class="account-form__heading">Create your account</h2>
+            <p class="account-form__welcome-text">Welcome! Please fill in the details to get started.</p>
+            <div class="account-form__login-method">
+              <img class="account-form__media-logo" src="../../other assets/google-logo.png" alt="Google">
+              <span class="account-form__media-name">Google</span>
+            </div>
+            <div class="account-form__login-method">
+              <img class="account-form__media-logo" src="../../other assets/facebook-logo.png" alt="Google">
+              <span class="account-form__media-name">Facebook</span>
+            </div>
+            <p class="account-form__or-text">or</p>
+            <div class="account-form__input-grid-container">
+              <div class="account-form__input-container account-form__input-container--first">
+                <label class="account-form__label" for="fname">First name</label>
+                <input class="account-form__input" id="fname" type="text">
+              </div>
+              <div class="account-form__input-container account-form__input-container--second">
+                <label class="account-form__label" for="lname">Last name</label>
+                <input class="account-form__input" id="lname" type="text">
+              </div>
+              <div class="account-form__input-container account-form__input-container--third">
+                <label class="account-form__label" for="email">Email address</label>
+                <input class="account-form__input" id="email" type="email">
+              </div>
+              <div class="account-form__input-container account-form__input-container--fourth">
+                <label class="account-form__label" for="password">Password</label>
+                <input class="account-form__input" id="password" type="password">
+              </div>
+            </div>
+            <button class="account-form__button" type="submit">Continue</button>
+            <p class="account-form__signin-text">Already have an account? <a class="account-form__signin-link" href="">Sign in</a></p>
+          </form>
+        </div>
+        <!-- cart -->
+         <img onclick=openCart() class="header__cart-img" src="../../other assets/cart.png" alt="cart icon">
+         <i onclick=openSidebar() class="fa-solid fa-bars header__bars-icon"></i>
+         <div class="cart">
+            <p class="cart__cart-text">Cart <span class="cart__item-quantity">(0 items)</span></p>
+            <i onclick=closeCart() class="fa-solid fa-xmark cart__xmark"></i>
+            <div class="cart__strip"></div>
+            <p class="cart__empty-text">Your cart is empty.</p>
+         </div>
+         <div onclick=closeCart() class="header__dark-bg"></div>
+      </div>
+    </nav>
+  </header>
+  <main class="main">
+    <section class="faq">
+
+      <h1 class="faq__heading">FAQ</h1>
+      <div class="faq__input-container">
+        <p class="faq__asked-questions-text">Frequently asked questions <i onclick=showQuestionField() class="fa-solid fa-magnifying-glass faq__search-icon faq__search-icon--smaller"></i></p>
+        <div class="faq__search-container">
+          <label onclick=hideQuestionField() class="faq__label" for="question">
+            <i class="fa-solid fa-magnifying-glass faq__search-icon"></i>
+          </label>
+          <input class="faq__input" id="question" type="text" placeholder="Looking for something?">
+          <span onclick=hideQuestionField() class="faq__x">x</span>
+        </div>
+      </div>
+      <div class="faq__second-container">
+        <input class="faq__radio-input faq__radio-input--first" type="radio" id="general" name="radio" checked>
+        <label class="faq__radio-label" for="general">    
+          <span class="faq__radio-name">General</span>
+        </label>
+        <input class="faq__radio-input faq__radio-input--second" type="radio" id="setup" name="radio">
+        <label class="faq__radio-label" for="setup">
+          <span class="faq__radio-name">Setting up FAQs</span>
+        </label>
+        <div class="faq__accordeon-container faq__accordeon-container--first">
+          <div class="faq__accordeon">
+            <div class="faq__accordeon-box faq__accordeon-box--expanded">
+              <p class="faq__accordeon-question">What is an FAQ section? <i class="fa-solid fa-angle-down faq__angle-down"></i></p>
+              <p class="faq__accordeon-content">An FAQ section can be used to quickly answer common questions about your business like "Where do you ship to?", "What are your opening hours?", or "How can I book a service?". </p>
+              <div class="faq__social-media-logos">
+                <a href="https://www.facebook.com/share_channel/#" target="_blank"><i class="fa-brands fa-facebook faq__facebook-logo"></i></a>
+                <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.wix.com%2Fdemone2%2Ftote-bag-store%2Ffaq%3FquestionId%3D847ca3f0-5b64-474e-b5f3-411365f893b6&appDefId=14c92d28-031e-7910-c9a8-a670011e062d" target="_blank"><i class="fa-brands fa-x-twitter faq__twitter-logo"></i></a>
+                <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Fmini%3Dtrue%26url%3Dhttps%3A%2F%2Fwww.wix.com%2Fdemone2%2Ftote-bag-store%2Ffaq%3FquestionId%3D847ca3f0-5b64-474e-b5f3-411365f893b6%26appDefId%3D14c92d28-031e-7910-c9a8-a670011e062d" target="_blank"><i class="fa-brands fa-linkedin faq__linkedin-logo"></i></a>
+              </div>
+            </div>
+            <div class="faq__accordeon-box">
+              <p class="faq__accordeon-question">Why do FAQs matter? <i class="fa-solid fa-angle-down faq__angle-down"></i></p>
+              <p class="faq__accordeon-content">FAQs are a great way to help site visitors find quick answers to common questions about your business and create a better navigation experience. </p>
+              <div class="faq__social-media-logos">
+                <a href="https://www.facebook.com/share_channel/#" target="_blank"><i class="fa-brands fa-facebook faq__facebook-logo"></i></a>
+                <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.wix.com%2Fdemone2%2Ftote-bag-store%2Ffaq%3FquestionId%3D847ca3f0-5b64-474e-b5f3-411365f893b6&appDefId=14c92d28-031e-7910-c9a8-a670011e062d" target="_blank"><i class="fa-brands fa-x-twitter faq__twitter-logo"></i></a>
+                <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Fmini%3Dtrue%26url%3Dhttps%3A%2F%2Fwww.wix.com%2Fdemone2%2Ftote-bag-store%2Ffaq%3FquestionId%3D847ca3f0-5b64-474e-b5f3-411365f893b6%26appDefId%3D14c92d28-031e-7910-c9a8-a670011e062d" target="_blank"><i class="fa-brands fa-linkedin faq__linkedin-logo"></i></a>
+              </div>
+            </div>
+            <div class="faq__accordeon-box">
+              <p class="faq__accordeon-question">Where can I add my FAQs? <i class="fa-solid fa-angle-down faq__angle-down"></i></p>
+              <p class="faq__accordeon-content">FAQs can be added to any page on your site or to your Wix mobile app, giving access to members on the go. </p>
+              <div class="faq__social-media-logos">
+                <a href="https://www.facebook.com/share_channel/#" target="_blank"><i class="fa-brands fa-facebook faq__facebook-logo"></i></a>
+                <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.wix.com%2Fdemone2%2Ftote-bag-store%2Ffaq%3FquestionId%3D847ca3f0-5b64-474e-b5f3-411365f893b6&appDefId=14c92d28-031e-7910-c9a8-a670011e062d" target="_blank"><i class="fa-brands fa-x-twitter faq__twitter-logo"></i></a>
+                <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Fmini%3Dtrue%26url%3Dhttps%3A%2F%2Fwww.wix.com%2Fdemone2%2Ftote-bag-store%2Ffaq%3FquestionId%3D847ca3f0-5b64-474e-b5f3-411365f893b6%26appDefId%3D14c92d28-031e-7910-c9a8-a670011e062d" target="_blank"><i class="fa-brands fa-linkedin faq__linkedin-logo"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faq__accordeon-container faq__accordeon-container--second">
+          <div class="faq__accordeon-box faq__accordeon-box--expanded">
+            <p class="faq__accordeon-question">How do I add a new question & answer? <i class="fa-solid fa-angle-down faq__angle-down"></i></p>
+            <p class="faq__accordeon-content">
+              <span class="faq__accordeon-nested-text">To add a new FAQ follow these steps:</span>
+              <span class="faq__accordeon-nested-text">1. Manage FAQs from your site dashboard or in the Editor</span>
+              <span class="faq__accordeon-nested-text">2. Add a new question & answer</span>
+              <span class="faq__accordeon-nested-text">3. Assign your FAQ to a category</span>
+              <span class="faq__accordeon-nested-text">4. Save and publish.</span>
+            </p>
+            <p class="faq__accordeon-content">You can always come back and edit your FAQs.</p>
+            <div class="faq__social-media-logos">
+              <a href="https://www.facebook.com/share_channel/#" target="_blank"><i class="fa-brands fa-facebook faq__facebook-logo"></i></a>
+              <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.wix.com%2Fdemone2%2Ftote-bag-store%2Ffaq%3FquestionId%3D847ca3f0-5b64-474e-b5f3-411365f893b6&appDefId=14c92d28-031e-7910-c9a8-a670011e062d" target="_blank"><i class="fa-brands fa-x-twitter faq__twitter-logo"></i></a>
+              <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Fmini%3Dtrue%26url%3Dhttps%3A%2F%2Fwww.wix.com%2Fdemone2%2Ftote-bag-store%2Ffaq%3FquestionId%3D847ca3f0-5b64-474e-b5f3-411365f893b6%26appDefId%3D14c92d28-031e-7910-c9a8-a670011e062d" target="_blank"><i class="fa-brands fa-linkedin faq__linkedin-logo"></i></a>
+            </div>
+          </div>
+          <div class="faq__accordeon-box">
+            <p class="faq__accordeon-question">Can I insert an image, video, or GIF in my FAQ? <i class="fa-solid fa-angle-down faq__angle-down"></i></p>
+            <p class="faq__accordeon-content">
+              <span class="faq__accordeon-nested-text">Yes. To add media follow these steps:</span>
+              <span class="faq__accordeon-nested-text">1. Manage FAQs from your site dashboard or in the Editor</span>
+              <span class="faq__accordeon-nested-text">2. Create a new FAQ or edit an existing one</span>
+              <span class="faq__accordeon-nested-text">3. From the answer text box click on the video, image or GIF icon</span>
+              <span class="faq__accordeon-nested-text">4. Add media from your library and save.</span>
+            </p>
+            <div class="faq__social-media-logos">
+              <a href="https://www.facebook.com/share_channel/#" target="_blank"><i class="fa-brands fa-facebook faq__facebook-logo"></i></a>
+              <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.wix.com%2Fdemone2%2Ftote-bag-store%2Ffaq%3FquestionId%3D847ca3f0-5b64-474e-b5f3-411365f893b6&appDefId=14c92d28-031e-7910-c9a8-a670011e062d" target="_blank"><i class="fa-brands fa-x-twitter faq__twitter-logo"></i></a>
+              <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Fmini%3Dtrue%26url%3Dhttps%3A%2F%2Fwww.wix.com%2Fdemone2%2Ftote-bag-store%2Ffaq%3FquestionId%3D847ca3f0-5b64-474e-b5f3-411365f893b6%26appDefId%3D14c92d28-031e-7910-c9a8-a670011e062d" target="_blank"><i class="fa-brands fa-linkedin faq__linkedin-logo"></i></a>
+            </div>
+          </div>
+          <div class="faq__accordeon-box">
+            <p class="faq__accordeon-question">How do I edit or remove the 'Frequently Asked Questions' title? <i class="fa-solid fa-angle-down faq__angle-down"></i></p>
+            <p class="faq__accordeon-content">
+              <span class="faq__accordeon-nested-text">You can edit the title from the FAQ 'Settings' tab in the Editor.</span>
+              <span class="faq__accordeon-nested-text">To remove the title from your mobile app go to the 'Site & App' tab in your Owner's app and customize.</span>
+            </p>
+            <div class="faq__social-media-logos">
+              <a href="https://www.facebook.com/share_channel/#" target="_blank"><i class="fa-brands fa-facebook faq__facebook-logo"></i></a>
+              <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.wix.com%2Fdemone2%2Ftote-bag-store%2Ffaq%3FquestionId%3D847ca3f0-5b64-474e-b5f3-411365f893b6&appDefId=14c92d28-031e-7910-c9a8-a670011e062d" target="_blank"><i class="fa-brands fa-x-twitter faq__twitter-logo"></i></a>
+              <a href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2FshareArticle%3Fmini%3Dtrue%26url%3Dhttps%3A%2F%2Fwww.wix.com%2Fdemone2%2Ftote-bag-store%2Ffaq%3FquestionId%3D847ca3f0-5b64-474e-b5f3-411365f893b6%26appDefId%3D14c92d28-031e-7910-c9a8-a670011e062d" target="_blank"><i class="fa-brands fa-linkedin faq__linkedin-logo"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__grid-container">
+      <div class="footer__grid-child">
+        <a class="footer__link" href="">Shipping & Returns</a>  
+        <a class="footer__link" href="">Store Policy</a>  
+        <a class="footer__link" href="">Payment Methods</a>  
+      </div>
+      <div class="footer__grid-child">
+        <a class="footer__link" href="">Contact</a>
+        <p class="footer__tel">Tel: 123-456-7890</p>
+        <a class="footer__link footer__link--underline" href="">info@mysite.com</a>
+      </div>
+      <div class="footer__grid-child">
+        <a class="footer__link" href="https://www.facebook.com/wix" target="_blank">Facebook</a>
+        <a class="footer__link" href="https://www.instagram.com/wix/" target="_blank">Instagram</a>
+        <a class="footer__link" href="https://www.pinterest.com/wixcom/" target="_blank">Pinterest</a>
+      </div>
+      <form class="footer__grid-child footer__grid-child--big">
+        <p class="footer__suggestion-text">Join our mailing list and never miss an update</p>
+        <div class="footer__inputs-container">
+          <label class="footer__email-label" for="email">Email*</label>
+          <input class="footer__input" id="email" type="email" required>
+          <div class="footer__checkbox-container">
+            <input class="footer__checkbox" id="check" type="checkbox" required>
+            <label class="footer__check-label" for="check">Yes, subscribe me to your newsletter. *</label>
+          </div>
+          <button class="footer__subscribe-btn" type="submit">Subscribe Now</button>
+        </div>
+      </form>
+    </div>
+  </footer>
+  <div class="below-footer">
+    <p class="below-footer__paragraph">&copy; 2035 by Tote. Powered and secured by <a class="below-footer__link" href="https://www.wix.com/?utm_campaign=vir_created_with" target="_blank">Wix</a></p>
+  </div>
+  <div class="dark-bg"></div>
+
+  <script src="../../script.js"></script>
+  <script src="./faq.js"></script>
+</body>
+</html>
