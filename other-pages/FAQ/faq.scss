@@ -18,7 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 180px;
+    margin-left: 150px;
   }
   &__search-container{
     position: absolute;
@@ -136,4 +136,38 @@
 @keyframes accordeon {
   0%{opacity: 0;  transform: translateY(500px);}
   100%{opacity: 1; transform: translateY(0);}
+}
+
+
+
+
+@media screen and (max-width: 1350px) {
+  .faq{
+    &__asked-questions-text{
+      margin-left: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .faq{
+    &__asked-questions-text{
+      margin-left: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .faq{
+    &__heading{
+      font-size: 30px;
+    }
+    &__asked-questions-text{
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  
 }

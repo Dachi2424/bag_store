@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 180px;
+  margin-left: 150px;
 }
 .faq__search-container {
   position: absolute;
@@ -135,5 +135,23 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@media screen and (max-width: 1350px) {
+  .faq__asked-questions-text {
+    margin-left: 100px;
+  }
+}
+@media screen and (max-width: 1260px) {
+  .faq__asked-questions-text {
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .faq__heading {
+    font-size: 30px;
+  }
+  .faq__asked-questions-text {
+    font-size: 24px;
   }
 }/*# sourceMappingURL=faq.css.map */
