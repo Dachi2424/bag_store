@@ -42,6 +42,9 @@
       font-size: 16px;
       margin-left: auto;
     }
+    &--mobile{
+      display: none !important;
+    }
   }
   &__input{
     width: 100%;
@@ -169,5 +172,35 @@
 }
 
 @media screen and (max-width: 1120px) {
-  
+  .faq{
+    margin: 245px 200px 315px;
+    &__heading{
+      margin-bottom: 70px;
+    }
+    &__asked-questions-text{
+      position: relative;
+      top: -40px;
+      margin-left: 0;
+      display: block;
+      margin-bottom: 60px;
+      font-size: 20px;
+    }
+    &__search-container{
+      top: 0;
+    }
+    &__search-icon{
+      &--smaller{
+        display: none !important;
+      }
+      &--mobile{
+        display: unset !important;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+      }
+    }
+    &__second-container{
+      margin-top: 0px;
+    }
+  }
 }
